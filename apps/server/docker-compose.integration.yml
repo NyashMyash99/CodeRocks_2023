@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: code_rocks_integration_testing_postgres
+    image: postgres:latest
+    ports:
+      - '54345:5432'
+    environment:
+      - POSTGRES_USER=prisma
+      - POSTGRES_PASSWORD=prisma
+      - POSTGRES_DB=tests
